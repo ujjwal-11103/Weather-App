@@ -8,27 +8,31 @@ html,
 body {
     width: 100vw;
     height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .main {
     width: 100%;
     height: 100%;
-    background-color: aqua;
     display: flex;
     justify-content: center;
     align-items: center;
+    /* background-color: aqua; */
+    background-color: #0698B9;
 }
 
 .container-main {
     width: 25%;
-    height: 65%;
-    background-color: gray;
+    height: auto;
+    background-color: #2D2072;
+    border-radius: 25px;
 }
 
 .container-inside {
     width: 100%;
     height: 100%;
-    background-color: wheat;
+    /* background-color: wheat; */
 }
 
 /* Section top */
@@ -39,9 +43,9 @@ body {
     justify-content: center;
     align-items: center;
     gap: 7%;
-    /* margin-top: 20px; */
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+    margin-top: 30px;
+    /* border-top: 2px solid black;
+    border-bottom: 2px solid black; */
 }
 
 .search-input input {
@@ -55,10 +59,10 @@ body {
     padding: 1.5%;
     border: 2px solid transparent;
     border-radius: 50px;
-    background-color: red;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #1AB5ED;
 }
 
 /* Middle section */
@@ -66,9 +70,9 @@ body {
 .middle-section {
     width: 100%;
     height: 65%;
-    background-color: red;
-    border-top: 1px solid black;
-    border-bottom: 2px solid black;
+    /* border-top: 1px solid black;
+    border-bottom: 2px solid black; */
+    /* background-color: red; */
 }
 
 .saved-image {
@@ -81,7 +85,7 @@ body {
     width: 50%;
     height: 40%;
     margin-top: 20px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .temp-area {
@@ -91,26 +95,33 @@ body {
 
 .celsius {
     width: 100%;
+    letter-spacing: 2px;
+    line-height: 3vw;
 }
 
 .celsius h2 {
     font-size: 2vw;
     text-align: center;
-
+    color: white;
 }
 
 .celsius h3 {
     font-size: 1.5vw;
     text-align: center;
+    color: white;
 }
 
 .bottom-section {
     width: 100%;
-    height: 20%;
+    height: 10vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: purple;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    line-height: 1.5vw;
+    /* background-color: purple; */
 }
 
 .humidity {
@@ -126,6 +137,11 @@ body {
     height: 3vw;
 }
 
+
+.humidity-text h4 {
+    color: white;
+}
+
 .speed {
     display: flex;
     justify-content: center;
@@ -136,4 +152,8 @@ body {
 .speed-img {
     width: 3vw;
     height: 3vw;
+}
+
+.speed-text h4 {
+    color: white;
 }
