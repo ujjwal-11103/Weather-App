@@ -70,10 +70,12 @@ body {
 .middle-section {
     width: 100%;
     height: 65%;
+    /* display: none; */
     /* border-top: 1px solid black;
     border-bottom: 2px solid black; */
     /* background-color: red; */
 }
+
 
 .saved-image {
     display: flex;
@@ -110,6 +112,19 @@ body {
     text-align: center;
     color: white;
 }
+
+/* 404 */
+
+.middle-section-404 {
+    width: 100%;
+    height: 65%;
+    display: none;
+    /* border-top: 1px solid black;
+    border-bottom: 2px solid black; */
+    /* background-color: red; */
+}
+
+/* bottom section */
 
 .bottom-section {
     width: 100%;

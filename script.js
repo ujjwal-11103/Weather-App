@@ -4,6 +4,14 @@ const search = document.getElementById("icon");
 
 const cloudimg = document.getElementById("cloud");
 
+// 404
+const middle = document.getElementById("middle-cloud");
+const middle404 = document.getElementById("middle-cloud-404");
+
+// text
+const errorText = document.getElementById("error-text");
+const errorDescription = document.getElementById("error-description");
+
 const celsiusText = document.getElementById("celsius-text");
 const celsiusText1 = document.getElementById("celsiusDes");
 
@@ -22,18 +30,27 @@ async function checkweather(city) {
 
     console.log(weatherData);
 
+    middle.style.display = "block";
+    middle404.style.display = "none";
+
+
+    if (weatherData.cod === "404") {
+        middle.style.display = "none";
+        middle404.style.display = "block";
+        errorText.innerHTML = `${weatherData.cod}`
+        errorDescription.innerHTML = `${weatherData.message}`;
+        console.log(weatherData.cod);
+        console.log(weatherData.message);
+        console.log("error");
+        return;
+    }
+
     celsiusText.innerHTML = `${Math.round(weatherData.main.temp - 273.15)}℃`
     celsiusDescription.innerHTML = `${weatherData.weather[0].main}`;
 
     humidityH4Text1.innerHTML = `${weatherData.main.humidity}%`;
 
     speedTextH4.innerHTML = `${weatherData.wind.speed} km/hr`;
-
-    // if (`${weatherData.cod}` == "404") {
-    //     cloudimg.src = "/Assets/404.png"
-    //     celsiusText.innerHTML = `${weatherData.cod}`
-    //     celsiusDescription.innerHTML = `${weatherData.message}`
-    // }
 
     console.log(weatherData.weather[0].main);
     console.log(weatherData.cod);
