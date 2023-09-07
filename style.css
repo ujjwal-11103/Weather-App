@@ -51,8 +51,21 @@ body {
 .search-input input {
     width: 100%;
     padding: 1vw 2vw;
-    border: 1px solid transparent;
     border-radius: 15px;
+    font-weight: 600;
+    font-size: 1vw;
+    /* color: white; */
+    background-color: #e6f5fb;
+    border: 1px solid red
+}
+
+input::placeholder {
+    /* color: white; */
+    letter-spacing: 0.09vw;
+}
+
+input:focus {
+    border: 3px solid rgb(44, 215, 221);
 }
 
 .search-icon {
@@ -63,6 +76,10 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #1AB5ED;
+}
+
+.search-icon:hover {
+    background-color: aqua;
 }
 
 /* Middle section */
@@ -171,4 +188,104 @@ body {
 
 .speed-text h4 {
     color: white;
+}
+
+
+
+/* media queries */
+
+@media (max-width:600px) {
+    .main {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .container-main {
+        width: 85vw;
+        height: auto;
+        padding: 1vw;
+    }
+
+    .container-inside {
+        width: 100%;
+        height: 100%;
+    }
+
+    .search-box {
+        width: 100%;
+        height: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0%;
+        /* background-color: red; */
+    }
+
+    .search-input {
+        width: 50vw;
+        height: 15vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .search-input input {
+        width: 80%;
+        height: 75%;
+        padding: 2vw 6vw;
+        font-size: 4.5vw;
+    }
+
+    input::placeholder {
+        /* color: white; */
+        text-align: center;
+        font-size: 4.5vw;
+        letter-spacing: 0.09vw;
+    }
+
+    .celsius {
+        width: 100%;
+        letter-spacing: 2px;
+        line-height: 11vw;
+    }
+
+    .celsius h2 {
+        font-size: 8vw;
+        text-align: center;
+        color: white;
+    }
+
+    .celsius h3 {
+        font-size: 7vw;
+        text-align: center;
+        color: white;
+    }
+
+    .humidity-text {
+        line-height: 5.5vw;
+    }
+
+    .humidity-img {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .humidity-text h4 {
+        color: white;
+        font-size: 4vw;
+    }
+
+    .speed-text {
+        line-height: 5.5vw;
+    }
+
+    .speed-img {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .speed-text h4 {
+        color: white;
+        font-size: 4vw;
+    }
 }

@@ -79,3 +79,4 @@ async function checkweather(city) {
 search.addEventListener('click', () => {
     checkweather(searchText.value)
 })
+
